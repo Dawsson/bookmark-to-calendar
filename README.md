@@ -2,6 +2,10 @@
 
 A Chrome extension that turns X bookmarks into a quick reminder prompt.
 
+## Demo
+
+![Bookmark to Calendar demo](assets/demo.gif)
+
 ## Install
 
 1. Download `bookmark-to-calendar-v1.0.0.zip` from the [latest release](https://github.com/Dawsson/bookmark-to-calendar/releases/latest).
@@ -25,3 +29,5 @@ Or install from source:
 - The repo includes all extension logo assets: `assets/logo.png` and Chrome icons in `icons/`.
 - Opens Google Calendar with event details filled in. It does not save events by itself.
 - No build step.
+
+Idea: https://x.com/BasedBiohacker/status/2061165566006542575

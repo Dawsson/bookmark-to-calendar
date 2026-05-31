@@ -27,6 +27,5 @@
       "run_at": "document_idle"
     }
   ],
-  "permissions": ["storage"],
-  "host_permissions": ["https://x.com/*", "https://twitter.com/*"]
+  "permissions": ["storage"]
 }
