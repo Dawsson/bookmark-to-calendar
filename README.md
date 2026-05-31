@@ -4,8 +4,6 @@ A Chrome extension that turns X bookmarks into a quick reminder prompt.
 
 ## Install
 
-### Humans
-
 1. Download `bookmark-to-calendar-v1.0.0.zip` from the [latest release](https://github.com/Dawsson/bookmark-to-calendar/releases/latest).
 2. Unzip it.
 3. Open `chrome://extensions`.
@@ -13,17 +11,13 @@ A Chrome extension that turns X bookmarks into a quick reminder prompt.
 5. Click **Load unpacked**.
 6. Select the unzipped folder.
 
-### From source
+Or install from source:
 
 1. Clone this repo.
 2. Open `chrome://extensions`.
 3. Turn on **Developer mode**.
 4. Click **Load unpacked**.
 5. Select the repo folder.
-
-### AI Agents
-
-Load this folder as an unpacked Chrome extension, then test on `https://x.com/home` by bookmarking an unbookmarked post.
 
 ## Notes
 
