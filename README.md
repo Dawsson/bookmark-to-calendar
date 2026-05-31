@@ -21,5 +21,6 @@ Load this folder as an unpacked Chrome extension, then test on `https://x.com/ho
 ## Notes
 
 - Runs only on `x.com` and `twitter.com`.
+- The repo includes all extension logo assets: `assets/logo.png` and Chrome icons in `icons/`.
 - Opens Google Calendar with event details filled in. It does not save events by itself.
 - No build step.

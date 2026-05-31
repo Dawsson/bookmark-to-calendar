@@ -25,6 +25,7 @@ function isBookmarkButton(element) {
 
 function extractPostData(button) {
   const article = closestPost(button);
+  const avatar = extractAvatarUrl(article);
   const author =
     article?.querySelector('[data-testid="User-Name"]')?.innerText?.trim() ||
     article?.querySelector('a[href^="/"][role="link"]')?.innerText?.trim() ||
@@ -40,9 +41,18 @@ function extractPostData(button) {
 
   return {
     author: collapseWhitespace(author).slice(0, 120),
+    avatar,
     text: collapseWhitespace(text).slice(0, 600),
     url: canonicalUrl
   };
+}
+
+function extractAvatarUrl(article) {
+  const avatarImage =
+    article?.querySelector('div[data-testid="Tweet-User-Avatar"] img') ||
+    article?.querySelector('a[href^="/"] img[src*="profile_images"]');
+
+  return avatarImage?.src || "";
 }
 
 function collapseWhitespace(value) {
@@ -69,13 +79,16 @@ function createRoot() {
     <section class="xbr-panel" role="dialog" aria-modal="true" aria-labelledby="xbr-title">
       <header class="xbr-header">
         <div>
-          <h1 class="xbr-title" id="xbr-title">Put it on your reminder.</h1>
+          <h1 class="xbr-title" id="xbr-title">Want a reminder?</h1>
         </div>
         <button class="xbr-close" type="button" aria-label="Close reminder">×</button>
       </header>
       <div class="xbr-body">
         <div class="xbr-post">
-          <p class="xbr-author"></p>
+          <div class="xbr-tweet-head">
+            <img class="xbr-avatar" alt="" hidden>
+            <p class="xbr-author"></p>
+          </div>
           <p class="xbr-text"></p>
         </div>
         <div class="xbr-actions" aria-label="Schedule reminder">
@@ -108,6 +121,14 @@ function showReminder(post) {
   root.dataset.text = post.text;
   root.querySelector(".xbr-author").textContent = post.author;
   root.querySelector(".xbr-text").textContent = post.text;
+  const avatar = root.querySelector(".xbr-avatar");
+  if (post.avatar) {
+    avatar.src = post.avatar;
+    avatar.hidden = false;
+  } else {
+    avatar.removeAttribute("src");
+    avatar.hidden = true;
+  }
   root.hidden = false;
 }
 
