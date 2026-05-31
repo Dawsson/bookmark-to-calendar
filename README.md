@@ -1,7 +1,5 @@
 # Bookmark to Calendar
 
-<img src="assets/logo.png" alt="Bookmark to Calendar logo" width="96">
-
 A Chrome extension that turns X bookmarks into a quick reminder prompt.
 
 ## Install
