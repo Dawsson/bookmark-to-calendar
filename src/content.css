@@ -1,0 +1,146 @@
+#xbr-root {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(12px);
+  color: #f6f8fa;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", Segoe UI, sans-serif;
+}
+
+#xbr-root[hidden] {
+  display: none;
+}
+
+.xbr-panel {
+  width: min(760px, 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
+    #0a0c0f;
+  box-shadow: 0 26px 90px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.xbr-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px 30px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.xbr-eyebrow {
+  margin: 0 0 8px;
+  color: #9aa5af;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.xbr-title {
+  margin: 0;
+  max-width: 560px;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.xbr-close {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 99px;
+  background: #15191d;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.xbr-body {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 24px;
+  padding: 24px 30px 30px;
+}
+
+.xbr-post {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: #111519;
+}
+
+.xbr-author {
+  margin: 0 0 10px;
+  color: #dbe2e8;
+  font-weight: 800;
+}
+
+.xbr-text {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: #aeb8c2;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.xbr-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.xbr-button {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  background: #f4f7f9;
+  color: #070809;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.xbr-button:hover {
+  background: #ffffff;
+}
+
+.xbr-button.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #171c21;
+  color: #f6f8fa;
+}
+
+.xbr-button.secondary:hover {
+  background: #22282e;
+}
+
+@media (max-width: 680px) {
+  #xbr-root {
+    padding: 12px;
+  }
+
+  .xbr-header,
+  .xbr-body {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .xbr-body {
+    grid-template-columns: 1fr;
+  }
+}
