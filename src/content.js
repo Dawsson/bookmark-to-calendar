@@ -69,8 +69,7 @@ function createRoot() {
     <section class="xbr-panel" role="dialog" aria-modal="true" aria-labelledby="xbr-title">
       <header class="xbr-header">
         <div>
-          <p class="xbr-eyebrow">You bookmarked this</p>
-          <h1 class="xbr-title" id="xbr-title">Put time on the calendar before it disappears.</h1>
+          <h1 class="xbr-title" id="xbr-title">Put it on your reminder.</h1>
         </div>
         <button class="xbr-close" type="button" aria-label="Close reminder">×</button>
       </header>
@@ -83,7 +82,7 @@ function createRoot() {
           <button class="xbr-button" type="button" data-minutes="60">In 1 hour</button>
           <button class="xbr-button" type="button" data-minutes="1440">Tomorrow</button>
           <button class="xbr-button" type="button" data-minutes="10080">Next week</button>
-          <button class="xbr-button secondary" type="button" data-minutes="0">Pick in Calendar</button>
+          <button class="xbr-button secondary" type="button" data-minutes="0">Choose in Calendar</button>
         </div>
       </div>
     </section>
